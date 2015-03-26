@@ -1,0 +1,16 @@
+Return-Path: root@host.home.lan
+Delivered-To: root@host.home.lan
+From: Charlie Root <root@host.home.lan>
+Date: Wed, 25 Mar 2015 20:30:01 +0100 (CET)
+Message-Id: <6271783592850634263.enqueue@host.home.lan>
+To: root@host.home.lan
+Subject: abc [go-nuts] xyz qwe
+Content-Length: 2075
+
+Mail testowy
+
+Przykładowy mail do testowania cleansubject. Fragment '[go-nuts]' w nagłówku
+Subject powinien zostać usunięty.
+
+Ten wiersz nie powinien zostać zmieniony ponieważ nie jest w nagłówku maila:
+Subject: abc [go-nuts] xyz qwe
