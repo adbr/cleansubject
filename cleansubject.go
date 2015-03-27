@@ -74,16 +74,16 @@ func help() {
 
 func cleansubject(w io.Writer, r io.Reader) error {
 	scanner := bufio.NewScanner(r)
-	header := true
+	inheader := true
 	for scanner.Scan() {
 		s := scanner.Text()
 		if s == "" {
 			// header od treści oddziela pusty wiersz
-			header = false
+			inheader = false
 		}
-		if header {
+		if inheader {
 			if strings.HasPrefix(s, "Subject:") {
-				if strings.Index(s, *from) != -1 {
+				if strings.Contains(s, *from) {
 					s = strings.Replace(s, *from, *to, *num)
 				}
 			}
